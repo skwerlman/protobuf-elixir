@@ -1,7 +1,7 @@
 defmodule Protobuf.Protoc.Generator.Util do
   @moduledoc false
   def trans_name(name) do
-    Macro.camelize(name)
+    Macro.camelize(name) |> String.replace("_", "")
   end
 
   def join_name(list) do
